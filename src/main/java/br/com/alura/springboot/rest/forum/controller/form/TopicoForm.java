@@ -7,7 +7,7 @@ import org.hibernate.validator.constraints.Length;
 
 import br.com.alura.springboot.rest.forum.modelo.Curso;
 import br.com.alura.springboot.rest.forum.modelo.Topico;
-import br.com.alura.springboot.rest.forum.repository.CursoRespository;
+import br.com.alura.springboot.rest.forum.repository.CursoRepository;
 
 public class TopicoForm {
 
@@ -38,7 +38,7 @@ public class TopicoForm {
 	public void setNomeCurso(String nomeCurso) {
 		this.nomeCurso = nomeCurso;
 	}
-	public Topico toEntity(CursoRespository cursoRepository) {
+	public Topico toEntity(CursoRepository cursoRepository) {
 		Curso curso = cursoRepository.findByNome(nomeCurso);
 		return new Topico(titulo, mensagem, curso);
 	} 

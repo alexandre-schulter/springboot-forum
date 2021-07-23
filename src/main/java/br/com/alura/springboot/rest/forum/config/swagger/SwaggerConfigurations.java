@@ -16,6 +16,8 @@ import springfox.documentation.spring.web.plugins.Docket;
 @Configuration
 public class SwaggerConfigurations {
 
+	//http://localhost:8080/swagger-ui/index.html
+	
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
@@ -24,7 +26,7 @@ public class SwaggerConfigurations {
                 .paths(PathSelectors.ant("/**"))
                 .build()
                 .ignoredParameterTypes(Usuario.class) //pra não aparecer senha de usuario
-                .globalOperationParameters(
+               /* .globalOperationParameters(
                         Arrays.asList(
                                 new ParameterBuilder()
                                     .name("Authorization")
@@ -32,7 +34,7 @@ public class SwaggerConfigurations {
                                     .modelRef(new ModelRef("string"))
                                     .parameterType("header")
                                     .required(false)
-                                    .build()));
+                                    .build()))*/;
         
         //TODO https://cursos.alura.com.br/forum/topico-swagger-ui-html-com-erro-403-137560
         //TODO http://springfox.github.io/springfox/docs/current/#migrating-from-existing-2-x-version

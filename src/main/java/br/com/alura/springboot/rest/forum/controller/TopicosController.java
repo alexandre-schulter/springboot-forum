@@ -30,7 +30,7 @@ import br.com.alura.springboot.rest.forum.controller.dto.TopicoDetalhadoDTO;
 import br.com.alura.springboot.rest.forum.controller.form.AtualizacaoTopicoForm;
 import br.com.alura.springboot.rest.forum.controller.form.TopicoForm;
 import br.com.alura.springboot.rest.forum.modelo.Topico;
-import br.com.alura.springboot.rest.forum.repository.CursoRespository;
+import br.com.alura.springboot.rest.forum.repository.CursoRepository;
 import br.com.alura.springboot.rest.forum.repository.TopicoRepository;
 
 @RestController
@@ -41,7 +41,7 @@ public class TopicosController {
 	private TopicoRepository topicoRepository;
 	
 	@Autowired
-	private CursoRespository cursoRepository;
+	private CursoRepository cursoRepository;
 
 	@GetMapping
 	//idealmente usar cache pra entidades raramente atualizadas
