@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.alura.demo-springboot</groupId>
-	<artifactId>forum2</artifactId>
+	<artifactId>AluraSpringbootRestApiForum</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>forum</name>
 	<description>Demo project for Spring Boot</description>
